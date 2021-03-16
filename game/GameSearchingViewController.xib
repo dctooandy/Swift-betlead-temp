@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="6ju-un-qL5" customClass="GameSearchingViewController" customModule="betlead" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="7hV-Kh-iGi">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2H-ZY-GWP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="搜索" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgE-x6-B3w">
+                                <rect key="frame" x="24" y="32" width="366" height="56"/>
+                                <color key="barTintColor" red="0.42352941179999998" green="0.47058823529999999" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <offsetWrapper key="searchTextPositionAdjustment" horizontal="5" vertical="0.0"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="lgE-x6-B3w" secondAttribute="bottom" id="8UH-ao-j7n"/>
+                            <constraint firstItem="lgE-x6-B3w" firstAttribute="leading" secondItem="X2H-ZY-GWP" secondAttribute="leading" constant="24" id="r8h-L6-A9k"/>
+                            <constraint firstAttribute="trailing" secondItem="lgE-x6-B3w" secondAttribute="trailing" constant="24" id="uNJ-aD-dWq"/>
+                            <constraint firstAttribute="height" constant="88" id="zvZ-Ye-tnw"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜索结果：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbz-3p-SKY">
+                        <rect key="frame" x="24" y="128" width="82" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.23137254900000001" green="0.27450980390000002" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fvh-aM-OIW">
+                        <rect key="frame" x="0.0" y="147.5" width="414" height="748.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dqp-vk-NYn">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="fvh-aM-OIW" firstAttribute="top" secondItem="pbz-3p-SKY" secondAttribute="bottom" id="5dm-7i-ixV"/>
+                    <constraint firstItem="fvh-aM-OIW" firstAttribute="leading" secondItem="Rl2-hn-FSH" secondAttribute="leading" id="6aX-Xl-6xI"/>
+                    <constraint firstItem="X2H-ZY-GWP" firstAttribute="top" secondItem="7hV-Kh-iGi" secondAttribute="top" id="GE9-KQ-l4M"/>
+                    <constraint firstItem="X2H-ZY-GWP" firstAttribute="leading" secondItem="Rl2-hn-FSH" secondAttribute="leading" id="Rna-Bp-ndU"/>
+                    <constraint firstItem="Rl2-hn-FSH" firstAttribute="trailing" secondItem="fvh-aM-OIW" secondAttribute="trailing" id="Xn3-cY-9r1"/>
+                    <constraint firstItem="pbz-3p-SKY" firstAttribute="leading" secondItem="Rl2-hn-FSH" secondAttribute="leading" constant="24" id="YHn-Vj-B6x"/>
+                    <constraint firstItem="pbz-3p-SKY" firstAttribute="top" secondItem="X2H-ZY-GWP" secondAttribute="bottom" constant="40" id="jgX-LK-Iam"/>
+                    <constraint firstItem="Rl2-hn-FSH" firstAttribute="trailing" secondItem="X2H-ZY-GWP" secondAttribute="trailing" id="oNN-Kz-QVe"/>
+                    <constraint firstAttribute="bottom" secondItem="fvh-aM-OIW" secondAttribute="bottom" id="ydM-24-Qof"/>
+                </constraints>
+                <viewLayoutGuide key="safeArea" id="Rl2-hn-FSH"/>
+            </view>
+            <connections>
+                <outlet property="collectionView" destination="fvh-aM-OIW" id="uCD-Lh-lEZ"/>
+                <outlet property="searchBar" destination="lgE-x6-B3w" id="BNR-1y-eN5"/>
+                <outlet property="topBgView" destination="X2H-ZY-GWP" id="uP7-0u-dfx"/>
+            </connections>
+            <point key="canvasLocation" x="112" y="89"/>
+        </viewController>
+    </objects>
+</document>
